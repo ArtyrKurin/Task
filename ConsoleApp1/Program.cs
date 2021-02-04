@@ -6,9 +6,10 @@ namespace ConsoleApp1
     public class GenericList<T>
     {
         Stack<T> stack = new Stack<T>();
-        public void Push(T input)
+        public Stack<T> Push(T input)
         {
-            stack.Push(input);          
+            stack.Push(input);
+            return stack;
         }
         public T Peek()
         {
@@ -34,7 +35,7 @@ namespace ConsoleApp1
     }
     class Program
     {
-        private class ExampleClass
+        public class ExampleClass
         {
             public string name { get; set; }
         }

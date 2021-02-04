@@ -8,17 +8,19 @@ namespace UnitTestProject1
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void EmptyStack()
         {
             GenericList<int> list1 = new GenericList<int>();
-            list1.Push(1);
-            list1.Push(2);
-            Console.WriteLine("int");
-            list1.Write();
-            GenericList<string> list2 = new GenericList<string>();
-            list1.Push(25);
-            list1.Count();
-            assertEquals(OBJECT_A, stack.pop());
+             
+            Equals(list1,false);
+        }
+
+        [TestMethod]
+        public void WrongPushData()
+        {
+            GenericList<int> list1 = new GenericList<int>();
+            var res = list1.Push('2');
+            Equals(res, false);
         }
     }
 }
